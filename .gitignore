@@ -4,6 +4,10 @@
 *.dll
 *.so
 *.dylib
+bin
+
+# VS Code specific files
+.vscode
 
 # Test binary, built with `go test -c`
 *.test
