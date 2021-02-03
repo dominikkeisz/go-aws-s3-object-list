@@ -1,9 +1,9 @@
 package main
 
 import (
-  "context"
-  "fmt"
-  "log"
+	"context"
+	"fmt"
+	"log"
 	"os"
 
 	"github.com/aws/aws-sdk-go-v2/aws"
