@@ -12,11 +12,8 @@ import (
 )
 
 func main() {
-	argCount := len(os.Args[1:])
-	if argCount != 1 {
-		log.Fatal("Name of your bucket needs to be the only argument!")
-	}
-	bucketName := os.Args[1]
+	
+	bucketName := getBucketNameFromArg(os.Args)
 
 	config, err := config.LoadDefaultConfig(context.TODO())
 	if err != nil {
@@ -36,4 +33,13 @@ func main() {
 	for _, object := range output.Contents {
 		fmt.Printf("key=%s size=%d\n", aws.ToString(object.Key), object.Size)
 	}
+}
+
+func getBucketNameFromArg(arg []string) string {
+	argCount := len(arg[1:])
+	if argCount != 1 {
+		log.Fatal("Name of your bucket needs to be the only argument!")
+	}
+
+	return arg[1]
 }

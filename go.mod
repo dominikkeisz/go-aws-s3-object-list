@@ -1,4 +1,4 @@
-module github.com/dominikkeisz/go-aws-s3-bucket-list
+module github.com/dominikkeisz/go-aws-s3-object-list
 
 go 1.15
 
