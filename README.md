@@ -1,5 +1,5 @@
-# go-aws-s3-bucket-list
-Go program for listing contents of your desired AWS S3 bucket
+# go-aws-s3-object-list
+Go program for listing objects of your desired AWS S3 bucket
 
 ### Configuration
 *~/.aws/config* needs to hold your region at least  
@@ -8,5 +8,5 @@ Go program for listing contents of your desired AWS S3 bucket
 ### Use it like this:
 ```
 go build
-./go-aws-s3-bucket-list mybucketname
+./go-aws-s3-object-list mybucketname
 ```
