@@ -12,8 +12,8 @@ import (
 )
 
 func main() {
-	
-	bucketName := getBucketNameFromArg(os.Args)
+
+	bucketName := GetBucketNameFromArg(os.Args)
 
 	config, err := config.LoadDefaultConfig(context.TODO())
 	if err != nil {
@@ -35,7 +35,7 @@ func main() {
 	}
 }
 
-func getBucketNameFromArg(arg []string) string {
+func GetBucketNameFromArg(arg []string) string {
 	argCount := len(arg[1:])
 	if argCount != 1 {
 		log.Fatal("Name of your bucket needs to be the only argument!")
