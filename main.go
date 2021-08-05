@@ -20,7 +20,9 @@ func main() {
 		log.Fatal(err)
 	}
 
-	client := s3.NewFromConfig(config)
+	client := s3.NewFromConfig(config, func (o *s3.Options)  {
+		o.Region = "us-east-1"
+	})
 
 	output, err := client.ListObjectsV2(context.TODO(), &s3.ListObjectsV2Input{
 		Bucket: aws.String(bucketName),
