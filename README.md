@@ -1,3 +1,5 @@
+![Last test result](https://github.com/dominikkeisz/go-aws-s3-object-list/actions/workflows/ci.yml/badge.svg)
+
 # go-aws-s3-object-list
 Go program for listing objects of your desired AWS S3 bucket
 
